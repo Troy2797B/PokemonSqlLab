@@ -1,1 +1,4 @@
-mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_types.sql;
+SELECT X.name, X.Primary_type, Y.name
+FROM Pokemons AS X
+INNER JOIN Types AS Y
+ON Y.id = X.primary_type;
