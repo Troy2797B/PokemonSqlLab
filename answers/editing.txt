@@ -1,0 +1,1 @@
+mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_types.sql;
