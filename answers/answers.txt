@@ -100,11 +100,5 @@ GROUP BY x.id;
 
 How many pokemon at level 100 does each trainer with at least one level 100 pokemone have?
 (Hint: your query should not display a trainer)
-//how many trainers have a pokemon over level 100?
-SELECT
-FROM pokemon_trainer
-JOIN pokemons
-WHERE pokelevel > 100;
-//how many pokemon does each ahve over level 100
-
+GOOD QUESTION LOL
 How many pokemon only belong to one trainer and no other?
