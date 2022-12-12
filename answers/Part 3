@@ -1,0 +1,66 @@
+What is each pokemon's primary type?
+//we want to show all the pokemon with their types
+//seems like an inner join. it has to show just the pokemon and the id
+SELECT X.name, X.Primary_type, Y.name
+FROM Pokemons AS X
+INNER JOIN Types AS Y
+ON Y.id = X.primary_type;
+
+What is Rufflet's secondary type?
+SELECT X.name, X.Primary_type, Y.name
+FROM Pokemons AS X
+INNER JOIN Types AS Y
+ON Y.id = X.primary_type
+WHERE X. name = 'Rufflet';
+
+Normal
+
+What are the names of the pokemon that belong to the trainer with trainerID 303?
+//return pokemon names
+//select y.pokemon_id
+//from pokemons x
+//join pokemon_trainer y
+on y.pokemon_id = x.id
+//where trainer id = 303
+
+SELECT Y.pokemon_id, x.name
+FROM pokemons AS X
+INNER JOIN pokemon_trainer AS Y
+ON X.id = Y.pokemon_id
+WHERE Y.trainerid = 303;
+
+How many pokemon have a secondary type Poison
+//return number of pokemon with type (looking for number of rows)
+ SELECT id FROM types WHERE name = 'Poison';
+ Poison is 7
+
+SELECT X.secondary_type , X.id, X.name, Y.name
+FROM Pokemons AS X
+INNER JOIN types AS Y
+ON X.secondary_type = Y.id
+WHERE X.secondary_type = 7;
+
+What are all the primary types and how many pokemon have that type?
+//how many pokemon have each tyyyyype woooow
+
+SELECT x.id, x.name, COUNT(X.name)
+FROM types AS X
+JOIN pokemons AS Y
+ON X.id = Y.primary_type
+GROUP BY x.id;
+
+How many pokemon at level 100 does each trainer with at least one level 100 pokemone have?
+(Hint: your query should not display a trainer)
+At least one HA
+
+Select COUNT(trainerID)
+FROM pokemon_trainer
+WHERE pokelevel >=  100
+GROUP BY trainerID;
+
+
+How many pokemon only belong to one trainer and no other?
+Select COUNT(trainerID)
+FROM pokemon_trainer
+WHERE COUNT(trainerID = 1)
+GROUP BY trainerID;

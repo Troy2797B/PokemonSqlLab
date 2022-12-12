@@ -1,0 +1,9 @@
+To import everything to mysql:
+
+CREATE DATABASE Pokemon;
+mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_pokemon_trainer.sql;
+mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_pokemons.sql;
+mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_trainers.sql;
+mysql -u troy2797B -p pokemon < /Users/troyanna/Dev/Projects/Labs/PokemonSqlLab/pokemon_sql/pokemon_types.sql;
+
+All imported. PHEW!
